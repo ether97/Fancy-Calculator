@@ -1,0 +1,14 @@
+.lightdark {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+    height: 50px;
+    padding: 0 100px;
+}
+
+.lightdark:hover {
+    background: #181818;
+}

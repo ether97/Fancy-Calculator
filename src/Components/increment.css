@@ -1,0 +1,27 @@
+.add-subtract {
+    display: flex;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 24rem;
+}
+
+.add-subtract > button {
+    outline: none;
+    font-size: 2rem;
+    padding: 0rem 4rem;
+    background-color: transparent;
+    border: solid 2px black;
+    color: white;
+}
+
+.add-subtract span {
+    font-size: 2rem;
+    color: white;
+}
+
+.add-subtract > button:hover, 
+.add-subtract > button:focus {
+    background-color: white;
+    color: black;
+} 

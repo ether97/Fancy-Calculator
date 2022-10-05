@@ -1,0 +1,18 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #38444d;
+    position: sticky;
+    top: 0;
+    height: 50px;
+}
+
+li {
+    float: left;
+  }
+  
+li.dropdown {
+    display: inline-block;
+}

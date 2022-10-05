@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap');
+
+:root {
+    --changingColor: white;
+    --hoverColor: black;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+#root {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transition-delay: 1.2s; */
+
+    background: #181818;
+} 
+
+/* .big-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: clip-path 1.2s ease-out;
+    clip-path: circle(0% at 0 0);
+    z-index: 1;
+} */
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4,6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5,6rem);
+    justify-content: center;
+    background: #101010;
+    box-shadow: inset 20px 20px 20px #0000008c;
+    border-radius: 10px;
+    z-index: 999;
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid black;
+    outline: none;
+    background-color: transparent;
+    color: var(--changingColor);
+}
+
+.calculator-grid > button:hover {
+    border: solid 1px var(--hoverColor);
+    color: white;
+}
+
+/* #00ffff  */
+
+.calculator-grid > button:nth-child(17) {
+    border-bottom-left-radius: 10px;
+}
+
+.calculator-grid > button:nth-child(19) {
+    border-bottom-right-radius: 10px;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1/-1;
+    background-color: transparent;
+    border: solid 1px black;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    font-size: 2.5rem;
+}
+
+.big {
+    color: white;
+    scale: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.black {
+    color: black;
+}
